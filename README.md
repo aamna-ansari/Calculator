@@ -1,4 +1,4 @@
-# Calculator 🧮
+# [Calculator](https://simple-calculaor.netlify.app/) 🧮
 
 This project features a simple and responsive calculator built using HTML, CSS, JavaScript, and Tailwind CSS. The calculator supports basic operations (addition, subtraction, multiplication, and division) along with a clear/reset button. It comes with a theme that includes three color options and is fully mobile-friendly.
 
