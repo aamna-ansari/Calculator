@@ -1,0 +1,204 @@
+
+/* Theme 1 */
+/* :root{
+    --main-bg: hsl(222, 26%, 31%);
+    --scr-bg:hsl(224, 36%, 15%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --resetBtn: hsl(225, 21%, 49%);
+    --key-shadow: hsl(240, 1%, 68%);
+    --red-key-togle: hsl(6, 63%, 50%);
+    --equalShadow:hsl(6, 70%, 34%);
+    --white:hsl(0, 0%, 100%);
+    --grayish-blue:hsl(221, 14%, 31%);
+    --text-color: hsl(0, 0%, 100%);
+    --btnClr:hsl(221, 14%, 31%);
+} */
+
+/* :root{
+    --main-bg: hsl(0, 0%, 90%); 
+    --scr-bg:hsl(0, 0%, 93%);
+    --keypad-bg: hsl(0, 5%, 81%);
+    --resetBtn: hsl(185, 42%, 37%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --red-key-togle: hsl(25, 98%, 40%);
+    --equalShadow:hsl(25, 99%, 27%);
+    --white:hsl(0, 0%, 100%);
+    --grayish-blue:hsl(185, 42%, 37%);
+    --grayish-cray-shadow:hsl(185, 58%, 25%);
+    --text-color: hsl(60, 10%, 19%);
+    --buttonClr:hsl(221, 14%, 31%);
+    --btnBg : hsl(0, 0%, 100%);
+} */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: "League Spartan";
+    font-weight: 700;
+}
+body{
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 8rem;
+}
+.theme-toggle p {
+    margin-right: 1.5rem;
+    font-size: 0.5rem;
+}
+
+input[type="range"] {
+    appearance: none;
+    background-color: var(--keypad-bg);
+    border-radius: 50px;
+    cursor: pointer;
+    width: 65px;
+    height: 25px;
+    padding: 10px;
+}
+input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--red-key-togle);
+    transition: background-color 0.5s;
+}
+
+.toggle-switch{
+    margin-bottom: 20px;
+}
+span{
+    font-size: 0.5rem;
+}
+
+.inputCal {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+.inputDisplay {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--scr-bg);
+    color: var(--text-color);
+    text-align: right;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    outline: none;
+}
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--keypad-bg);
+    padding: 1rem;
+    border-radius: .3rem;
+}
+
+button {
+    height: 1.5rem;
+    border-radius: .2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;   
+    color: var(--btnClr);
+    box-shadow: 0px 4px var(--key-shadow);
+    background-color: var(--btnBg);
+}
+button:hover{
+    background-color: var(--btnBg1);
+}
+
+
+.resetBtn, .reset-btn{
+    background-color: var(--resetBtn);
+    color: var(--white);
+    box-shadow: 0px 4px var(--grayish-blue)
+    
+}
+.resetBtn:hover, .reset-btn:hover{
+   background-color: var(--btnHoverBg);
+   color:var(--white);
+}
+.spanBtn {
+    grid-column: span 2; 
+}
+.equalBtn{
+    background-color: var(--red-key-togle);
+    color: var(--white);
+    box-shadow: 0px 4px var(--equalShadow);
+}
+.equalBtn:hover{
+background-color: var(--equalBtnHover);
+}
+.equalBtn:active{
+box-shadow: var(--equalShadow);
+}
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px var(--key-shadow);
+}
+
+
+
+   /* MEDIA QUERY  */
+
+@media (max-width: 780px) {
+    body {
+        padding: 2px;
+    }
+
+    header {
+        max-width: 300px;
+    }
+
+    .inputCal {
+        max-width: 300px;
+    }
+
+    .inputDisplay {
+        height: 2.2rem;
+        font-size: 1.25rem;
+        padding: 10px;
+    }
+
+    .keys {
+        max-width: 300px;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    button {
+        height: 1.5rem;
+        font-size: .7rem;
+        padding: 5px;
+    }
+    .theme-toggle {
+        margin-left: 3rem;
+    }
+    
+}

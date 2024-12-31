@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorApp</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/images.jfif" type="image/x-icon">
+
+
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SECTION FOR TOOGLE THEME  -->
+    <header>
+        <div class="header-container">
+            <div class="title">calc</div>
+        <div class="theme-toggle">
+            <p>THEME</p>
+            <div class="toggle-switch">
+                <div class="spaan">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+                <input type="range" min="1" max="3" value="1" class="theme-slider">
+            </div>
+        </div>
+    </div>
+    </header>
+    
+<!-- SECTION FOR INPUT -->
+    <section class="inputCal">
+        <input type="text" class="inputDisplay">
+    </section>
+
+    <!-- SECTION FOR KEY -->
+
+    <section class="keys">
+        <!-- ROW-1 -->
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="del" class="resetBtn">DEL</button>
+        <!-- ROW-2 -->
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="+">+</button>
+        <!-- ROW-3 -->
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-">-</button>
+        <!-- ROW-4 -->
+        <button data-value=".">.</button>
+        <button data-value="0">0</button>
+        <button data-value="/">/</button>
+        <button data-value="*">x</button>
+        <!-- ROW-5 -->
+        <button data-value="reset" class="spanBtn resetBtn">RESET</button>
+        <button data-value="=" class="spanBtn equalBtn">=</button>
+
+    </section>
+</body><script src="./script.js"></script>
+</html>
